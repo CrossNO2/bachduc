@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bức Thư Đặc Biệt</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a, #2a3f4f, #0d4d4d);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #e0e0e0;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .closed-letter {
+            background-color: rgba(30, 30, 30, 0.8);
+            border: 2px dashed #00b4b4;
+            border-radius: 10px;
+            padding: 40px;
+            position: relative;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .closed-letter:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 180, 180, 0.2);
+        }
+
+        .closed-letter h1 {
+            color: #00b4b4;
+            margin-bottom: 20px;
+            text-shadow: 0 0 8px rgba(0, 180, 180, 0.3);
+        }
+
+        .closed-letter p {
+            color: #a0a0a0;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        .open-btn {
+            background-color: #008080;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1em;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .open-btn:hover {
+            background-color: #00b4b4;
+            box-shadow: 0 0 15px rgba(0, 180, 180, 0.6);
+        }
+
+        .letter {
+            background-color: rgba(30, 30, 30, 0.9);
+            border: 1px solid #00b4b4;
+            border-radius: 10px;
+            padding: 40px;
+            display: none;
+            position: relative;
+            box-shadow: 0 0 30px rgba(0, 180, 180, 0.3);
+            animation: fadeIn 0.8s ease;
+        }
+
+        .letter-content {
+            text-align: left;
+            line-height: 1.8;
+            font-size: 1.1em;
+            white-space: pre-line;
+            padding: 20px;
+            background-color: rgba(40, 40, 40, 0.7);
+            border-radius: 5px;
+            border-left: 4px solid #00b4b4;
+        }
+
+        .signature {
+            font-style: italic;
+            text-align: right;
+            margin-top: 30px;
+            color: #00b4b4;
+        }
+
+        .close-btn {
+            background-color: transparent;
+            color: #00b4b4;
+            border: 1px solid #00b4b4;
+            padding: 8px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+        }
+
+        .close-btn:hover {
+            background-color: rgba(0, 180, 180, 0.1);
+        }
+
+        .seal {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 60px;
+            height: 60px;
+            background-color: #b30000;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            transform: rotate(15deg);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            border: 2px solid #ffcccc;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 10px;
+            }
+            
+            .closed-letter, .letter {
+                padding: 25px;
+            }
+            
+            .seal {
+                width: 50px;
+                height: 50px;
+                right: -15px;
+                top: -15px;
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="closed-letter" id="closedLetter">
+            <h1>Quà</h1>
+            <p>Gửi bạn pxd</p>
+            <button class="open-btn" onclick="openLetter()">Mở Thư</button>
+        </div>
+
+        <div class="letter" id="letter">
+            <h1>Gửi bạn pxd</h1>
+            
+            <div class="letter-content">
+                Hai hai hai
+
+                Thực ra là t cũng viết lưu bút cho b roài, nma còn vài điều muốn nói với b 
+                Chẳng biết nữa, năm tháng sau này mỗi người 1 ngả, chẳng nói trước được gì
+                nhưng mà t muốn nói là, gặp gỡ và quen được b thật sự là một phép màu ấy
+
+                Thú thật thì, ngày đầu tiên t add b qua fb thì cũng nhiều cái lắm,
+                hồi đó ban đầu t định add b để lquen ấy, nma 1 hồi sau nói chuyện
+                tđn t thấy kiểu, chẳng biết nói nnao nma t thấy b kiểu rất phù hợp
+                để nói chuyện các thứ các kiểu deeptalk các thứ
+
+                Mà cũng đúng thế thật, t với b cũng từng ngồi với nhau nói đủ mọi thứ trên
+                đời, tuy chỉ là 2 đứa nhóc nhưng lại tò mò với thế giới bên ngoài, t dần có 
+                1 góc nhìn mới về thế giới này, rằng việc ra đời sớm không có nghĩa là mình
+                đã hiểu hết, b cho t thấy nhiều hơn 1 khía cạnh của 1 vde, t thật sự rất 
+                trân trọng điều ấy luôn á
+
+                Sau cùng thì, cũng phải nói thật rằng t cũng có tgian nhìn b theo 1 cách khác,
+                hay nói thẳng ra là t có rung động ấy xD, nma t sợ sẽ khiến b khó xử, với cả
+                thực ra t cũng thấy b hay lẩn lẩn đi lắm, nên thôi nghĩ là, bạn bè với cô b 
+                láo lếu này có khi lại hay
+
+                Tới đây thì hết rồi đó.
+                T để lại cái này ở trên web, sau này nếu muốn b có thể mở lại đọc cũng được hêh
+                Cũng vẫn mong mình sẽ còn gặp lại, nhưng nếu không thể thì đừng quên t và bức thư này nháaa
+            </div>
+            
+            <div class="signature">Bduc-Cross</div>
+            
+            <button class="close-btn" onclick="closeLetter()">Đóng Thư</button>
+        </div>
+    </div>
+
+    <script>
+        function openLetter() {
+            document.getElementById('closedLetter').style.display = 'none';
+            document.getElementById('letter').style.display = 'block';
+            
+            const letter = document.getElementById('letter');
+            letter.style.animation = 'none';
+            void letter.offsetWidth; 
+            letter.style.animation = 'fadeIn 0.8s ease';
+        }
+
+        function closeLetter() {
+            document.getElementById('letter').style.display = 'none';
+            document.getElementById('closedLetter').style.display = 'block';
+
+            const closedLetter = document.getElementById('closedLetter');
+            closedLetter.style.animation = 'none';
+            void closedLetter.offsetWidth; // Trigger reflow
+            closedLetter.style.animation = 'fadeIn 0.5s ease';
+        }
+    </script>
+</body>
+</html>
